@@ -1,0 +1,13 @@
+version: '3'
+services:
+  my-ubuntu-container:
+    build:
+      context: .
+    image: ubuntu_image
+    container_name: ubuntu
+    ports:
+      - "4242:22"
+    env_file:
+      - .env
+    volumes:
+      - ${HOST_PATH}:${CONTAINER_PATH}:rw
