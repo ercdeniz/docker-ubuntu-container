@@ -41,9 +41,17 @@ cd ~ && ln -s ~/goinfre/docker .docker
 
 # Start Docker.app
 open /goinfre/$USER_NAME/Docker.app
+TEMPVAR=0
 while ! docker info &> /dev/null; do
-	echo "Waiting for Docker to start..."
+	if [ $TEMPVAR -eq 0 ]; then
+		echo "Waiting for Docker to start..."
+	fi
+	TEMPVAR=$((TEMPVAR+1))
 	sleep 3
+	if [ $TEMPVAR -eq 10 ]; then
+		echo "Docker failed to start. Exiting..."
+		exit 1
+	fi
 done
 
 echo ".env file has been updated."
