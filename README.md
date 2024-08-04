@@ -8,4 +8,34 @@ Ubuntu container kit in Docker
 3. Connect to the container using the following command inthe terminal or Remote - SSH extension in VSCode
    ```bash
    ssh -p 4242 root@localhost
-4. Use the make help command for other commands.
+4. Use the `make help` command for other commands.
+
+---
+## *The Container Contains*
+1. [x] Package Managers and System Tools
+   - `curl`
+   - `wget`
+   - `vim`
+   - `git`
+
+2. [x] Compilers and Construction Tools
+   - `g++`
+   - `clang`
+   - `gcc`
+   - `make`
+
+3. [x] Python ve Pipx
+   - `python3`
+   - `python3-pip`
+   - `pipx`
+
+4. [x] Libraries and Development Tools
+   - `libreadline-dev`
+   - `valgrind`
+
+5. [x] SSH Server
+   - `openssh-server`
+
+6. [ ] Minilibx
+   - > **in progress...** :hourglass_flowing_sand:
+

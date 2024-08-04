@@ -16,7 +16,8 @@ RUN apt-get update && \
 	python3 \
 	python3-pip \
 	libreadline-dev \
-	openssh-server
+	openssh-server \
+	valgrind
 
 # Generate SSH keys
 RUN mkdir /var/run/sshd && \

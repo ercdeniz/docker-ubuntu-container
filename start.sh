@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Update .bashrc to change to /app directory
+echo 'cd /app' >> /root/.bashrc
+
 # Norminette setup
 pipx ensurepath && source ~/.bashrc
 

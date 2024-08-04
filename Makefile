@@ -27,7 +27,7 @@ clean:
 
 prune:
 	@echo "ROOT_PASSWORD=\nHOST_PATH=\nCONTAINER_PATH=" > .env
-	@docker system prune -f
+	@docker system prune -a -f
 
 fclean: down clean prune
 
@@ -52,8 +52,8 @@ help:
 	@echo "  make down        # Stop and remove the container"
 	@echo "  make re          # Restart the container"
 	@echo "  make clean       # Remove the Docker image"
-	@echo "  make prune       # Remove all stopped containers and unused images"
-	@echo "  make fclean      # Remove the Docker image and prune the system"
+	@echo "  make prune       # Remove all stopped containers, unused images and networks"
+	@echo "  make fclean      # Down, clean and prune"
 	@echo "  make close       # Close the Docker daemon"
 	@echo "  make exec        # Execute a command inside the running container"
 	@echo "  make logs        # Display logs of the running container"
