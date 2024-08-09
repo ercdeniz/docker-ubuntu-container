@@ -10,6 +10,9 @@ USER_NAME=$(whoami)
 HOME_DIR=$(eval echo ~$USER_NAME)
 HOST_PATH="${HOME_DIR}/Desktop/ubuntu-linux"
 
+# Set permissions
+chmod -R 777 /goinfre/$USER_NAME
+
 # Set .env file
 cat <<EOF > .env
 ROOT_PASSWORD=${ROOT_PASSWORD}
@@ -48,7 +51,7 @@ while ! docker info &> /dev/null; do
 	fi
 	TEMPVAR=$((TEMPVAR+1))
 	sleep 3
-	if [ $TEMPVAR -eq 10 ]; then
+	if [ $TEMPVAR -eq 20 ]; then
 		echo "Docker failed to start. Exiting..."
 		exit 1
 	fi
