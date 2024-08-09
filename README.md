@@ -5,7 +5,7 @@ Ubuntu container kit in Docker
 
 1. Navigate to the directory of the project.
 2. Run the `make` command to build the project.
-3. *** If you are using Docker for the first time, you will need to open it manually and accept the user agreement. ***
+3. ***If you are using Docker for the first time, you will need to open it manually and accept the user agreement.***
 4. Connect to the container using the following command inthe terminal or Remote - SSH extension in VSCode
    ```bash
    ssh -p 4242 root@localhost
